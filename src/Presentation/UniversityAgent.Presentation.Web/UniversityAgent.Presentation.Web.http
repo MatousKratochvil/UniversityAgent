@@ -1,0 +1,6 @@
+@UniversityAgent.Presentation.Web_HostAddress = http://localhost:5107
+
+GET {{UniversityAgent.Presentation.Web_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
