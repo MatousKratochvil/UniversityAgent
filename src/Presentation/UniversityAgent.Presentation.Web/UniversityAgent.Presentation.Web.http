@@ -1,0 +1,55 @@
+@UniversityAgent.Presentation.Web_HostAddress = http://localhost:5107
+
+### Get all students
+GET {{UniversityAgent.Presentation.Web_HostAddress}}/api/students
+Accept: application/json
+
+###
+
+### Get all courses
+GET {{UniversityAgent.Presentation.Web_HostAddress}}/api/courses
+Accept: application/json
+
+###
+
+### Create a new student
+POST {{UniversityAgent.Presentation.Web_HostAddress}}/api/students
+Content-Type: application/json
+
+{
+  "firstName": "Test",
+  "lastName": "Student",
+  "email": "test.student@university.cz"
+}
+
+###
+
+### Create a new course
+POST {{UniversityAgent.Presentation.Web_HostAddress}}/api/courses
+Content-Type: application/json
+
+{
+  "code": "TEST101",
+  "name": "Test Course",
+  "description": "A test course",
+  "credits": 5,
+  "maxStudents": 30
+}
+
+###
+
+### Enroll student in course (replace with actual GUIDs)
+POST {{UniversityAgent.Presentation.Web_HostAddress}}/api/enrollments
+Content-Type: application/json
+
+{
+  "studentId": "00000000-0000-0000-0000-000000000000",
+  "courseId": "00000000-0000-0000-0000-000000000000"
+}
+
+###
+
+### Unenroll student from course (replace with actual GUIDs)
+DELETE {{UniversityAgent.Presentation.Web_HostAddress}}/api/enrollments/00000000-0000-0000-0000-000000000000/00000000-0000-0000-0000-000000000000
+
+###
